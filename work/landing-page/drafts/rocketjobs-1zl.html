@@ -624,29 +624,6 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(1.75rem,4vw,2.5rem) 
 html{scroll-behavior:smooth}
 #portale,#teraz,#cena,#jak{scroll-margin-top:100px}
 
-/* ── Nawigacja na wąskich ekranach ──
-   Oryginał chował linki poniżej 64rem, przez co w wąskim oknie
-   (panel podglądu, tablet) z menu zostawało samo logo i CTA.
-   Zamiast chować, zwijamy je w rząd przewijany poziomo. */
-@media (max-width:64rem){
-  .navlinks{
-    display:flex;
-    flex:1 1 auto;min-width:0;
-    margin-inline:10px;
-    overflow-x:auto;
-    scrollbar-width:none;-ms-overflow-style:none;
-    -webkit-overflow-scrolling:touch;
-    scroll-snap-type:x proximity;
-  }
-  .navlinks::-webkit-scrollbar{display:none}
-  .navlinks a{padding:0 10px;scroll-snap-align:start}
-}
-@media (max-width:34rem){
-  .navlinks a{font-size:11px;padding:0 8px}
-  /* Pigułka ma style inline, stąd !important. Ściskamy logo i CTA,
-     żeby na telefonie zostało miejsce na przewijane linki. */
-  .navpill{padding:10px 14px!important}
-  .navbuy{height:36px!important;padding:0 12px!important;font-size:12px!important}
 }
 
 /* ── Stopka wg przekazanego projektu: wyśrodkowana kolumna ──
