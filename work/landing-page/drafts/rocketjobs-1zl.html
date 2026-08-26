@@ -661,6 +661,15 @@ html{scroll-behavior:smooth}
 /* Lead cennika ma zmieścić się w jednym wersie na desktopie.
    Bazowe .slab-head p ma max-width:52ch, a zdanie liczy ich 72. */
 #cena .slab-head p{max-width:none}
+
+/* Metka warunku przy cenie promocyjnej. Ta cena jest wspólna dla obu
+   zakładek portali, więc metka obowiązuje w obu. */
+.tier-now{flex-wrap:wrap}
+.tier-badge{
+  font-size:.6875rem;font-weight:700;letter-spacing:.01em;
+  padding:.3em .6em;border-radius:99px;white-space:nowrap;
+  background:rgba(198,6,72,.09);color:var(--mag-deep);
+}
 </style>
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 24px 0;pointer-events:none">
   <nav class="navpill" aria-label="Nawigacja" style="max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 24px;border-radius:24px;background:rgba(255,255,255,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid #F0EDEA;box-shadow:0 1px 2px rgba(19,18,16,0.02), 0 1px 4px rgba(19,18,16,0.04);pointer-events:all">
@@ -791,7 +800,7 @@ html{scroll-behavior:smooth}
           </div>
           <div class="tier-body">
             <p class="tier-was" data-row><s data-f="was">1&nbsp;270 zł netto</s></p>
-            <p class="tier-now"><span class="tier-amt">1</span> <span class="tier-cur">zł netto</span></p>
+            <p class="tier-now"><span class="tier-amt">1</span> <span class="tier-cur">zł netto</span><span class="tier-badge">dla nowych klientów</span></p>
             <a class="btn btn-primary tier-cta" href="https://rocketjobs.com/panel/rejestracja" target="_blank" rel="noopener noreferrer">
               Skorzystaj z promocji <span class="arw" aria-hidden="true">→</span>
             </a>
