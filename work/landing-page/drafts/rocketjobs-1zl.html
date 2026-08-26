@@ -668,11 +668,14 @@ html{scroll-behavior:smooth}
    zawartość w pionowym środku. Treść idzie do góry, drobny odnośnik
    z zasadami do dołu. */
 @media (max-width:60rem){
-  /* Bez narzuconej wysokości ekranu. Przy 100svh nadmiar miejsca zbierał
-     się w jedną dziurę: albo nad treścią, albo między nią a odnośnikiem. */
-  .hero{min-height:auto;align-items:stretch;padding-top:6rem;padding-bottom:clamp(2.5rem,9vw,4rem)}
-  .hero .hero-grid{justify-content:flex-start}
-  .hero-rules{margin-top:clamp(2rem,7vw,3rem)}
+  /* Hero wypełnia ekran, ale nadmiar miejsca dzieli się na dwie części:
+     treść jest wyśrodkowana w swojej przestrzeni, a drobny druk siedzi
+     przy dolnej krawędzi. Wcześniej cała pustka zbierała się w jednym
+     miejscu, między przyciskami a odnośnikiem. */
+  .hero{min-height:100svh;align-items:stretch;padding-top:6rem;padding-bottom:clamp(2rem,6vw,3rem)}
+  .hero .hero-grid{flex:1 1 auto;justify-content:space-between}
+  .hero-copy{flex:1 1 auto;justify-content:center}
+  .hero-rules{margin-top:clamp(1.5rem,5vw,2.5rem)}
 }
 </style>
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 24px 0;pointer-events:none">
