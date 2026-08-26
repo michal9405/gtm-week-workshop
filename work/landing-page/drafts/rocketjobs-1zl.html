@@ -685,7 +685,11 @@ html{scroll-behavior:smooth}
    #cena odzyskuje górny odstęp: ma go wyzerowany w stylu inline, więc
    biel zaczynałaby się dokładnie na krawędzi ciemnej płyty i nie
    czytałaby się jako osobne pasmo. Stąd !important. */
-#cena{background:#FFFFFF;padding-top:clamp(3rem,7vw,6rem)!important}
+#cena{background:#FFFFFF}
+/* Cennik i instrukcja mają górny odstęp wyzerowany w stylu inline.
+   Przy własnych tłach obie zaczynałyby się dokładnie na krawędzi
+   pasma, więc odzyskują standardowy odstęp sekcji. */
+#cena,#jak{padding-top:clamp(3rem,7vw,6rem)!important}
 .close{background:#FFFFFF}
 </style>
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 24px 0;pointer-events:none">
