@@ -647,6 +647,21 @@ html{scroll-behavior:smooth}
   padding:.3em .6em;border-radius:99px;white-space:nowrap;
   background:rgba(198,6,72,.09);color:var(--mag-deep);
 }
+
+/* Drobny odnośnik do regulaminu na dole hero. Stopień pisma wzięty
+   z opisów statystyk w sekcji portali: 12px/500, tracking .2px. */
+.hero-rules{
+  margin:clamp(1.5rem,3vw,2.25rem) 0 0;
+  font-size:12px;font-weight:500;line-height:16px;letter-spacing:.2px;
+  color:#78746C;
+}
+.hero-rules a{
+  color:inherit;text-decoration:underline;
+  text-decoration-color:rgba(198,6,72,.45);
+  text-decoration-thickness:1px;text-underline-offset:3px;
+  transition:color 150ms ease,text-decoration-color 150ms ease;
+}
+.hero-rules a:hover{color:var(--mag-deep);text-decoration-color:var(--mag-deep)}
 </style>
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 24px 0;pointer-events:none">
   <nav class="navpill" aria-label="Nawigacja" style="max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 24px;border-radius:24px;background:rgba(255,255,255,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid #F0EDEA;box-shadow:0 1px 2px rgba(19,18,16,0.02), 0 1px 4px rgba(19,18,16,0.04);pointer-events:all">
@@ -706,6 +721,9 @@ html{scroll-behavior:smooth}
           <li class="cat cat-it" style="--fd:7.8s"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.0829 15.0524L14.6942 12.9476L13.4629 15.0524H12.0566L13.9955 11.8996L12.0043 8.88631H13.4629L14.8254 10.9476L16.0393 8.88631H17.4454L15.5153 11.9868L17.5414 15.0524H16.0829ZM11.3755 12.5022C11.3755 13.073 11.2692 13.5546 11.0566 13.9476C10.8441 14.3407 10.5501 14.6333 10.1746 14.8252C9.7991 15.0175 9.37243 15.1135 8.89495 15.1135C8.15568 15.1135 7.56468 14.8923 7.12216 14.4497C6.67964 14.0074 6.45838 13.3582 6.45838 12.5022V8.88631H7.68108V12.5022C7.68108 12.9854 7.78721 13.3479 8 13.5895C8.21225 13.8314 8.51946 13.9521 8.92126 13.9521C9.31712 13.9521 9.62144 13.8314 9.83387 13.5895C10.0465 13.3479 10.1528 12.9854 10.1528 12.5022V8.88631H11.3755V12.5022ZM12 2C6.47694 2 2 6.47712 2 12C2 17.5227 6.47694 22 12 22C17.5227 22 22 17.5227 22 12C22 6.47712 17.5227 2 12 2Z" fill="currentColor"></path></svg><span>UX/UI</span></li>
         </ul>
       </aside>
+
+      <!-- DO UZUPEŁNIENIA: href ma prowadzić do PDF z regulaminem promocji -->
+      <p class="hero-rules"><a href="#">Sprawdź zasady</a></p>
 
     </div>
   </section>
