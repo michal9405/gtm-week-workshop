@@ -677,6 +677,16 @@ html{scroll-behavior:smooth}
   .hero-copy{flex:1 1 auto;justify-content:center}
   .hero-rules{margin-top:clamp(1.5rem,5vw,2.5rem)}
 }
+
+/* ── Rytm sekcji ──
+   Naprzemiennie biel i krem, tak jak zaczyna sekcja portali:
+   hero (gradient) → portale (biel) → teraz (krem) → cena (biel)
+   → jak (krem) → domknięcie (biel) → stopka (krem).
+   #cena odzyskuje górny odstęp: ma go wyzerowany w stylu inline, więc
+   biel zaczynałaby się dokładnie na krawędzi ciemnej płyty i nie
+   czytałaby się jako osobne pasmo. Stąd !important. */
+#cena{background:#FFFFFF;padding-top:clamp(3rem,7vw,6rem)!important}
+.close{background:#FFFFFF}
 </style>
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 24px 0;pointer-events:none">
   <nav class="navpill" aria-label="Nawigacja" style="max-width:980px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 12px 12px 24px;border-radius:24px;background:rgba(255,255,255,0.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid #F0EDEA;box-shadow:0 1px 2px rgba(19,18,16,0.02), 0 1px 4px rgba(19,18,16,0.04);pointer-events:all">
