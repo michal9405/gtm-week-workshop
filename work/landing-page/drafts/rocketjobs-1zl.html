@@ -553,50 +553,7 @@ section{padding-block:clamp(3rem,7vw,6rem)}
 
 /* Inert preview of the cart field — deliberately not a real input, so
    nobody types the code here instead of in the basket. */
-.code-shot{
-  margin:1rem 0 0;padding:clamp(1rem,2vw,1.25rem);
-  background:#fff;border-radius:14px;
-  box-shadow:inset 0 0 0 1px var(--hair-soft),0 10px 24px -20px rgba(19,18,16,.4);
-  max-width:30rem;
-}
-.shot-label{font-size:.875rem;font-weight:700;color:var(--ink)}
-.shot-hint{margin-top:.15rem;font-size:.8125rem;color:var(--ink-70)}
-.shot-row{display:flex;align-items:center;gap:.625rem;margin-top:.75rem;flex-wrap:wrap}
-.shot-field{
-  flex:1 1 12rem;min-width:0;
-  display:inline-flex;align-items:center;
-  padding:.6875rem .875rem;border-radius:10px;
-  box-shadow:inset 0 0 0 1.5px var(--ink);
-  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
-  font-size:.9375rem;font-weight:600;letter-spacing:.04em;color:var(--ink);
-}
-.shot-caret{
-  display:inline-block;width:1.5px;height:1.05em;margin-left:2px;
-  background:var(--ink);animation:caret 1.1s steps(1) infinite;
-}
-@keyframes caret{0%,50%{opacity:1}50.01%,100%{opacity:0}}
 
-/* The code types itself, holds, clears and repeats. Width is stepped in
-   9 increments — one per character of 1ADVANCED — and the target width
-   adds back the 0.04em of letter-spacing per character, otherwise the last
-   glyph is clipped. */
-.shot-typed{
-  display:inline-block;overflow:hidden;white-space:nowrap;
-  vertical-align:bottom;
-  animation:typecode 6s steps(9,end) infinite;
-}
-@keyframes typecode{
-  0%   {width:0}
-  30%  {width:calc(9ch + 0.36em)}
-  88%  {width:calc(9ch + 0.36em)}
-  94%  {width:0}
-  100% {width:0}
-}
-.shot-btn{
-  flex:none;padding:.6875rem 1.125rem;border-radius:999px;
-  background:var(--ink);color:var(--cream);
-  font-size:.875rem;font-weight:700;
-}
 
 
 /* Closing */
@@ -646,8 +603,6 @@ footer{border-top:1px solid var(--hair);padding-block:clamp(1.75rem,4vw,2.5rem) 
   .btn:hover{transform:none}
   .cat{animation:none}
   .cat:hover{transform:none}
-  .shot-caret{animation:none}
-  .shot-typed{animation:none;width:auto}
   .js .tier-was::after,.js .tier-was.seen::after{transform:scaleX(1);transition:none}
   .hero-cats .cat{filter:none;opacity:1}
   .hero{animation:none}
@@ -899,17 +854,6 @@ html{scroll-behavior:smooth}
         <li>
           <div class="step-body">
             <h3>W&nbsp;miejscu na kod promocyjny wpisz: <span class="codeword">1ADVANCED</span></h3>
-          <figure class="code-shot" role="img"
-                  aria-label="Pole „Masz kod promocyjny?” w koszyku, z wpisanym kodem 1ADVANCED i przyciskiem Aktywuj kod">
-            <div aria-hidden="true">
-              <p class="shot-label">Masz kod promocyjny?</p>
-              <p class="shot-hint">Wpisz kod, aby obniżyć cenę ogłoszenia.</p>
-              <div class="shot-row">
-                <span class="shot-field"><span class="shot-typed">1ADVANCED</span><i class="shot-caret"></i></span>
-                <span class="shot-btn">Aktywuj kod</span>
-              </div>
-            </div>
-          </figure>
           </div>
         </li>
       </ol>
