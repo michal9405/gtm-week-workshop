@@ -668,10 +668,11 @@ html{scroll-behavior:smooth}
    zawartość w pionowym środku. Treść idzie do góry, drobny odnośnik
    z zasadami do dołu. */
 @media (max-width:60rem){
-  .hero{align-items:stretch;padding-top:6rem}
-  .hero .hero-grid{flex:1 1 auto;justify-content:space-between}
-  .hero-copy{padding-top:clamp(.5rem,3vw,1.5rem)}
-  .hero-rules{margin-top:clamp(2rem,8vw,3.5rem)}
+  /* Bez narzuconej wysokości ekranu. Przy 100svh nadmiar miejsca zbierał
+     się w jedną dziurę: albo nad treścią, albo między nią a odnośnikiem. */
+  .hero{min-height:auto;align-items:stretch;padding-top:6rem;padding-bottom:clamp(2.5rem,9vw,4rem)}
+  .hero .hero-grid{justify-content:flex-start}
+  .hero-rules{margin-top:clamp(2rem,7vw,3rem)}
 }
 </style>
 <div style="position:fixed;top:0;left:0;right:0;z-index:200;padding:16px 24px 0;pointer-events:none">
